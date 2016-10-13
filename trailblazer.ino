@@ -47,8 +47,8 @@ void loop() {
   if(analogRead(IRRA)<200){
   if(analogRead(IRM)>800&&analogRead(IRL1)<200&&analogRead(IRR1)<200)
   { turn=turn;
-    leftturn==0;
-    rightturn==0;
+    leftturn=0;
+    rightturn=0;
     digitalWrite(speedpin,HIGH);
     digitalWrite(mpin1cw,HIGH);
     digitalWrite(mpin1acw,LOW);
@@ -58,8 +58,8 @@ void loop() {
   }
   else if(analogRead(IRM)>800&&analogRead(IRL1)>800&&analogRead(IRR1)<200)
   { turn=turn+1;
-    leftturn==1;
-    rightturn==0;
+    leftturn=1;
+    rightturn=0;
     digitalWrite(speedpin,HIGH);
     digitalWrite(mpin1cw,HIGH);
     digitalWrite(mpin1acw,LOW);
@@ -68,8 +68,8 @@ void loop() {
   }
   else if(analogRead(IRM)>800&&analogRead(IRL1)<200&&analogRead(IRR1)>800)
   { turn=turn+1;
-     leftturn==0;
-    rightturn==1;
+     leftturn=0;
+    rightturn=1;
      digitalWrite(speedpin,HIGH);
     digitalWrite(mpin1cw,LOW);
     digitalWrite(mpin1acw,HIGH);
